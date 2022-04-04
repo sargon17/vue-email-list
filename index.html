@@ -19,6 +19,10 @@
 
 <body>
     <div id="app">
+        <div>
+            <input type="number" min="1" max="99" v-model="mailNumber">
+            <button @click="generateEmails">Generate</button>
+        </div>
         <ul id="mailList">
             <li v-for="email in generatedEmails" v-if="generatedEmails.length >= mailNumber">{{ email }}</li>
 
